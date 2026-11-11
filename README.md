@@ -2,7 +2,7 @@
 
 Página de lançamento do Shift Control: descarregar o APK Android e instruções para instalar no iPhone.
 
-Publicado em https://marloon-dev.github.io/shift-control-instalar/
+Publicado em https://marloon-dev.github.io/shift-control-site/
 
 Os ecrãs usam dados de exemplo. O app em si está em https://marloon-dev.github.io/shift-control-app/.
 
