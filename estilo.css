@@ -150,6 +150,21 @@ h2 { font-size: clamp(32px, 4.4vw, 54px); font-weight: 900; }
 .galeria figure { margin: 0; flex: 0 0 auto; width: min(270px, 70vw); scroll-snap-align: center; }
 .galeria figcaption { margin-top: 16px; text-align: center; color: var(--muted); font-size: 15px; }
 
+/* ---------- Computador ---------- */
+.navegador { margin: 0; border-radius: 18px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--sombra); }
+.nav-barra { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: var(--surface-2); border-bottom: 1px solid var(--line); }
+.nav-barra span { width: 12px; height: 12px; border-radius: 50%; background: #3a3236; flex: none; }
+.nav-barra span:first-child { background: var(--accent); }
+.nav-barra p { flex: 1; margin-left: 12px; padding: 5px 14px; border-radius: 999px; background: var(--bg); color: var(--muted); font-size: 13px; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.navegador img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; background: var(--bg); }
+.miniaturas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 20px; }
+.miniaturas button { display: flex; flex-direction: column; gap: 10px; padding: 8px; border-radius: 14px; background: var(--surface); border: 1.5px solid var(--line); color: var(--muted); font: 500 14px/1.2 var(--f-body); cursor: pointer; transition: border-color .2s, color .2s; }
+.miniaturas button:hover { color: var(--ink); }
+.miniaturas button[aria-pressed="true"] { border-color: var(--accent); color: var(--ink); }
+.miniaturas img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; border-radius: 8px; }
+.pc-instalar { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: start; margin-top: 40px; padding: 36px; border-radius: 28px; background: var(--surface); border: 1px solid var(--line); }
+.pc-instalar .passos { margin: 0; }
+
 /* ---------- Instalar ---------- */
 .instalar { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .cartao-instalar { display: flex; flex-direction: column; padding: 36px; border-radius: 28px; background: var(--surface); border: 1px solid var(--line); scroll-margin-top: 90px; transition: border-color .3s, box-shadow .3s; }
@@ -214,6 +229,8 @@ h2 { font-size: clamp(32px, 4.4vw, 54px); font-weight: 900; }
   .destaque { padding-bottom: 0; }
   .instalar { grid-template-columns: 1fr; }
   .acesso { grid-template-columns: 1fr; gap: 32px; padding: 36px 28px; }
+  .pc-instalar { grid-template-columns: 1fr; gap: 28px; }
+  .miniaturas { grid-template-columns: repeat(2, 1fr); }
   .faixa-numeros ul { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 720px) {
@@ -224,6 +241,8 @@ h2 { font-size: clamp(32px, 4.4vw, 54px); font-weight: 900; }
   .ctas .btn { flex: 1 1 100%; }
   .grelha-funcoes { grid-template-columns: 1fr; }
   .cartao-instalar { padding: 26px 22px; }
+  .pc-instalar { padding: 26px 22px; }
+  .nav-barra p { display: none; }
   .qr { display: none; }
   .c1 { display: none; }
   .c2 { right: 0; bottom: 12%; }

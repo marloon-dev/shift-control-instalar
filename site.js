@@ -24,9 +24,18 @@
     }
   }
 
+  // Computador: as miniaturas trocam o ecrã grande.
+  const ecra = document.getElementById('ecra-pc')
+  document.querySelectorAll('.miniaturas button').forEach(b => b.addEventListener('click', () => {
+    if (!ecra) return
+    ecra.src = b.dataset.ecra
+    ecra.alt = b.dataset.alt
+    document.querySelectorAll('.miniaturas button').forEach(x => x.setAttribute('aria-pressed', String(x === b)))
+  }))
+
   // Secções aparecem suavemente ao entrar no ecrã (só se o utilizador não pediu menos movimento).
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
-    const alvos = document.querySelectorAll('.destaque, .grelha-funcoes li, .cartao-instalar, .acesso, .faq details, .final, .secao-cabeca')
+    const alvos = document.querySelectorAll('.destaque, .grelha-funcoes li, .cartao-instalar, .acesso, .faq details, .final, .secao-cabeca, .navegador, .pc-instalar')
     const obs = new IntersectionObserver(entradas => {
       for (const e of entradas) if (e.isIntersecting) { e.target.classList.add('visivel'); obs.unobserve(e.target) }
     }, { rootMargin: '0px 0px -8% 0px' })
