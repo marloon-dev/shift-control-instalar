@@ -253,3 +253,22 @@ h2 { font-size: clamp(32px, 4.4vw, 54px); font-weight: 900; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .revelar { opacity: 1; translate: none; }
 }
+
+/* WhatsApp: contacto direto */
+.btn-whatsapp { background: #25D366; border-color: #25D366; color: #06210F; box-shadow: 0 12px 32px -14px rgba(37, 211, 102, .7); }
+.btn-whatsapp:hover { background: #3BE07A; box-shadow: 0 16px 40px -12px rgba(37, 211, 102, .75); }
+.whatsapp {
+  position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: calc(18px + env(safe-area-inset-bottom)); z-index: 60;
+  display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px 12px 14px; min-height: 56px; border-radius: 999px;
+  background: #25D366; color: #06210F; font-weight: 600; font-size: 16px; text-decoration: none;
+  box-shadow: 0 14px 36px -10px rgba(0, 0, 0, .7), 0 0 0 1px rgba(255, 255, 255, .12);
+  transition: transform .2s ease, background .2s ease;
+}
+.whatsapp:hover { background: #3BE07A; transform: translateY(-2px); }
+.whatsapp svg { width: 28px; height: 28px; fill: currentColor; flex: none; }
+@media (max-width: 720px) {
+  .whatsapp { padding: 14px; min-height: 0; }
+  .whatsapp span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+@media (prefers-reduced-motion: reduce) { .whatsapp { transition: none; } }
+.rodape { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
