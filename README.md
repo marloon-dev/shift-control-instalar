@@ -6,4 +6,4 @@ Publicado em https://marloon-dev.github.io/shift-control-site/
 
 Os ecrãs usam dados de exemplo. O app em si está em https://marloon-dev.github.io/shift-control-app/ (iPhone e computador); no Android instala-se o APK nativo, que se atualiza sozinho.
 
-Para publicar um APK novo, substitua `shift-control.apk` e atualize o número da versão e o tamanho em `index.html`.
+Os APK novos publicam-se a partir do repositório do app com `bash scripts/release-android.sh "notas"`: o script gera o APK, cria a release, atualiza `shift-control.apk`, a versão e o tamanho em `index.html` e avisa os apps instalados.
